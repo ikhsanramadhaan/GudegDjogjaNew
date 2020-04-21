@@ -1,4 +1,4 @@
-package com.example.admingudegdjogja;
+package com.example.admingudegdjogja.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.admingudegdjogja.R;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editTextUsername;
@@ -23,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editTextUsername.getText().toString() == "admin" && editTextPassword.getText().toString() == "admin"){
+                if(editTextUsername.getText().toString().equalsIgnoreCase("") && editTextPassword.getText().
+                        toString().equalsIgnoreCase( "")){
                     Intent intent = new Intent(MainActivity.this , HomeActivity.class);
                     startActivity(intent);
                 }
