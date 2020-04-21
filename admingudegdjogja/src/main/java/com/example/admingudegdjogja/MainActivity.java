@@ -23,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this , HomeActivity.class);
-                startActivity(intent);
+                if(editTextUsername.getText().toString() == "admin" && editTextPassword.getText().toString() == "admin"){
+                    Intent intent = new Intent(MainActivity.this , HomeActivity.class);
+                    startActivity(intent);
+                }
 
             }
         });
