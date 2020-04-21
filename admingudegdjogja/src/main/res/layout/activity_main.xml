@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:background="#E3E3E3">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="@dimen/dimen_big_ultra_32dp"
+        android:text="LOGIN AS ADMIN"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:elevation="@dimen/dimen_small_4dp"
         android:id="@+id/contentPanel"
@@ -72,4 +82,11 @@
             android:textColor="@android:color/white"
             android:layout_marginBottom="@dimen/dimen_big_ultra_32dp"/>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentPanel"
+        android:layout_marginTop="114dp"
+        android:src="@drawable/background" />
 </RelativeLayout>
