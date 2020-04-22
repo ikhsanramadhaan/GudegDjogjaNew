@@ -34,4 +34,9 @@
     <string name="txt_menu_tambahan">Satuan</string>
     <string name="title_ubah_menu">Ubah Menu</string>
     <string name="txt_simpan">SIMPAN</string>
+    <string name="hint_nama_menu">Nama Menu</string>
+    <string name="title_nama_menu">Nama Menu</string>
+    <string name="title_kategori_menu">Kategori Menu</string>
+    <string name="title_deskripsi_menu">Deskripsi Menu</string>
+    <string name="title_detail_pesanan">Detail Pesanan</string>
 </resources>

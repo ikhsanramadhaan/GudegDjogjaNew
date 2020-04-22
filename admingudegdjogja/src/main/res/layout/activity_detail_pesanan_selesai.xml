@@ -75,6 +75,7 @@
                 android:layout_marginTop="@dimen/dimen_big_16dp"
                 android:textSize="@dimen/text_size_title_small_18sp" />
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pesanan_main_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/content_list_makanan"/>
@@ -90,6 +91,7 @@
                 android:textSize="@dimen/text_size_title_small_18sp"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pesanan_tambahan_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/content_list_makanan"/>
@@ -187,6 +189,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/detail_pesanan_selesai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_button_2"

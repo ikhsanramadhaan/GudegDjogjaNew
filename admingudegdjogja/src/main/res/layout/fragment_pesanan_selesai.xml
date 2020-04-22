@@ -6,7 +6,7 @@
     tools:context=".view.fragment.PesananSelesaiFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_pesanan_masuk"
+        android:id="@+id/rv_pesanan_selesai"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/dimen_medium_8dp"

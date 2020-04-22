@@ -56,7 +56,7 @@
                         tools:listitem="@layout/content_menu_makanan" />
                 </LinearLayout>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/frg_dsn_judul_dsn_fab"
+                    android:id="@+id/frg_menu_fab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorPrimary"
