@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_action_bar_rounded">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_medium_8dp"
+        android:text="@string/title_ubah_menu"
+        android:layout_marginStart="@dimen/dimen_big_16dp"
+        android:textColor="@color/colorTextWhite"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium_16sp"
+        />
+    <TextView
+        android:layout_below="@id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_big_16dp"
+        android:layout_marginBottom="@dimen/dimen_big_16dp"
+        android:text="@string/txt_makanan"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/text_size_medium_16sp"/>
+
+</RelativeLayout>

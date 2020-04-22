@@ -28,4 +28,10 @@
     <string name="dummy_harga_delivery">Rp. 1.000</string>
     <string name="txt_total">Total</string>
     <string name="txt_selesai">SELESAI</string>
+    <string name="txt_menu_10_k">Menu 10 K</string>
+    <string name="txt_dummy_makanan">Gudeg Djogja Telor Mata Sapi</string>
+    <string name="txt_dummy_deskripsi">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
+    <string name="txt_menu_tambahan">Satuan</string>
+    <string name="title_ubah_menu">Ubah Menu</string>
+    <string name="txt_simpan">SIMPAN</string>
 </resources>

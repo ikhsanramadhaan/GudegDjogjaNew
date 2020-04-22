@@ -44,8 +44,15 @@ public class PesananMasukFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView =  inflater.inflate(R.layout.fragment_pesanan_masuk, container, false);
-        rvView = (RecyclerView)rootView.findViewById(R.id.rv_pesanan_masuk);
+
+
+        return  inflater.inflate(R.layout.fragment_pesanan_masuk, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        rvView = (RecyclerView)view.findViewById(R.id.rv_pesanan_masuk);
         rvView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getContext());
         rvView.setLayoutManager(layoutManager);
@@ -69,6 +76,5 @@ public class PesananMasukFragment extends Fragment {
 
             }
         });
-        return rootView;
     }
 }

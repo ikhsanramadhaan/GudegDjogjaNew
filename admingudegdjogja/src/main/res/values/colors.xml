@@ -2,7 +2,10 @@
 <resources>
     <color name="colorPrimary">#3D3027</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#E3E3E3</color>
+    <color name="colorAccent">#BF360C</color>
+
+    <color name="backgroundcolor">#3D3027</color>
+    <color name="linearbackground">#E3E3E3</color>
 
 
     <color name="colorTextBlack">#000000</color>

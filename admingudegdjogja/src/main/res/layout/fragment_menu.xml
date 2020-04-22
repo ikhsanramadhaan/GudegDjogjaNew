@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.MenuFragment">
+    android:layout_width="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".view.fragment.MenuFragment"
+        android:background="@color/colorPrimary">
 
-</FrameLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/roundedbackround">
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_menu10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_menu_10_k"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_title_big_24sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="@dimen/text_size_medium_16sp"
+                    android:layout_marginTop="@dimen/text_size_medium_16sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_menu_10_k"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/content_menu_makanan"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_menu_tambahan"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_title_big_24sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="@dimen/text_size_medium_16sp"
+                    android:layout_marginTop="@dimen/text_size_medium_16sp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/id_satuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/content_menu_makanan" />
+                </LinearLayout>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/frg_dsn_judul_dsn_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dimen_medium_8dp"
+                    android:src="@drawable/ic_add_black_24dp"
+                    />
+            </RelativeLayout>
+    </FrameLayout>
+</ScrollView>
