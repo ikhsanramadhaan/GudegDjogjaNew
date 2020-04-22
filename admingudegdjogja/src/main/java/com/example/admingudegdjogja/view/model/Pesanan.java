@@ -12,6 +12,9 @@ public class Pesanan implements Parcelable {
     private int total_harga;
     private String makanan_id;
 
+    public Pesanan() {
+    }
+
     public Pesanan(String pesanan_id, String pesanan_status, String pesanan_nama, String pesanan_alamat, String pesanan_nokontak, int total_harga, String makanan_id) {
         this.pesanan_id = pesanan_id;
         this.pesanan_status = pesanan_status;

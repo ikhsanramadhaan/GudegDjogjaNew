@@ -21,7 +21,8 @@ public class RecyclerViewPesananMasukAdapter extends RecyclerView.Adapter<Recycl
     private Context context;
     private ArrayList<Pesanan> data;
 
-    public RecyclerViewPesananMasukAdapter(Context context) {
+    public RecyclerViewPesananMasukAdapter(ArrayList<Pesanan> data,Context context) {
+        this.data = data;
         this.context = context;
     }
 
