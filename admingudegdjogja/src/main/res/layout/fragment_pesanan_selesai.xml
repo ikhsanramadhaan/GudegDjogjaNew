@@ -11,6 +11,6 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/dimen_medium_8dp"
         android:layout_marginTop="@dimen/dimen_medium_8dp"
-        tools:listitem="@layout/recycler_view_pesanan_selesai"/>
+        tools:listitem="@layout/content_pesanan_selesai"/>
 
 </FrameLayout>

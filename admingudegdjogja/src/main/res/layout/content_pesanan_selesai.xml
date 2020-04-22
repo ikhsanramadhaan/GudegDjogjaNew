@@ -15,7 +15,7 @@
         android:layout_width="@dimen/frogo_rv_dimen_50dp"
         android:layout_height="@dimen/frogo_rv_dimen_50dp"
         android:src="@drawable/ic_home_black_24dp"/>
-    
+
     <TextView
         android:id="@+id/orderan"
         android:layout_marginTop="@dimen/dimen_big_16dp"
@@ -37,7 +37,7 @@
         android:textColor="@color/colorTextBlack"
         android:textSize="@dimen/text_size_title_small_18sp"/>
     <TextView
-        android:id="@+id/jumlah_order_ke"
+        android:id="@+id/pesanan_id"
         android:layout_marginTop="@dimen/dimen_big_16dp"
         android:layout_toEndOf="@id/hint"
         android:layout_width="wrap_content"
@@ -51,7 +51,7 @@
         android:layout_marginTop="@dimen/dimen_medium_8dp"
         android:layout_marginStart="@dimen/frogo_rv_dimen_20dp"
         android:layout_toEndOf="@id/icon"
-        android:layout_below="@id/jumlah_order_ke"
+        android:layout_below="@id/pesanan_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_pemesan"
@@ -69,7 +69,7 @@
         android:textColor="@color/colorTextBlack"
         android:textSize="@dimen/text_size_title_small_18sp"/>
     <TextView
-        android:id="@+id/id_nama_pemesan"
+        android:id="@+id/pesanan_nama"
         android:layout_marginTop="@dimen/dimen_medium_8dp"
         android:layout_toEndOf="@id/hint2"
         android:layout_below="@id/hint"
@@ -102,7 +102,7 @@
         android:textColor="@color/colorTextBlack"
         android:textSize="@dimen/text_size_title_small_18sp"/>
     <TextView
-        android:id="@+id/id_alamat"
+        android:id="@+id/pesanan_alamat"
         android:layout_marginTop="@dimen/dimen_medium_8dp"
         android:layout_toEndOf="@id/hint3"
         android:layout_below="@id/hint2"
@@ -136,7 +136,7 @@
         android:textColor="@color/colorTextBlack"
         android:textSize="@dimen/text_size_title_small_18sp"/>
     <TextView
-        android:id="@+id/id_no_hp"
+        android:id="@+id/pesanan_no_kontak"
         android:layout_marginTop="@dimen/dimen_medium_8dp"
         android:layout_marginBottom="@dimen/dimen_medium_8dp"
         android:layout_toEndOf="@id/hint3"

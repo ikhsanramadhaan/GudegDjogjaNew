@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.activity.DetailPesananMasukActivity"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_medium_8dp"
+                android:text="@string/txt_detail_pesanan"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/text_size_title_medium_20sp"
+                android:layout_marginTop="@dimen/dimen_medium_8dp"/>
+
+            <TextView
+                android:id="@+id/pesanan_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_medium_8dp"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/text_size_title_medium_20sp"
+                tools:text="123456"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/frogo_rv_dimen_100dp"
+            android:src="@drawable/bg_new"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp"
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:background="@drawable/bg_rv">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_detail_pesanan"
+            android:textColor="@color/colorTextBlack"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_big_16dp"
+            android:textSize="@dimen/text_size_title_small_18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_makanan"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_big_16dp"
+            android:textSize="@dimen/text_size_title_small_18sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/content_list_makanan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_tambahan"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_big_16dp"
+            android:textSize="@dimen/text_size_title_small_18sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/content_list_makanan"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_subtotal"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:textSize="@dimen/text_size_title_small_18sp"/>
+
+                <TextView
+                    android:id="@+id/pesanan_total_harga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/dummy_harga"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:textSize="@dimen/text_size_title_small_18sp"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txt_delivery"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:layout_marginStart="@dimen/dimen_medium_8dp"
+                        android:layout_marginTop="@dimen/dimen_big_16dp"
+                        android:textSize="@dimen/text_size_title_small_18sp"/>
+
+                    <TextView
+                        android:id="@+id/pesanan_harga_delivery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/dummy_harga_delivery"
+                        android:textColor="@android:color/secondary_text_light"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dimen_medium_8dp"
+                        android:layout_marginTop="@dimen/dimen_big_16dp"
+                        android:textSize="@dimen/text_size_title_small_18sp"/>
+
+             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_total"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:textSize="@dimen/text_size_title_small_18sp"/>
+
+                <TextView
+                    android:id="@+id/pesanan_harga_totalplus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/dummy_harga_delivery"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:textSize="@dimen/text_size_title_small_18sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_2"
+        android:text="@string/txt_selesai"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium_16sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:paddingEnd="@dimen/frogo_rv_dimen_50dp"
+        android:paddingStart="@dimen/frogo_rv_dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_big_16dp"
+        android:layout_marginBottom="@dimen/dimen_big_16dp"
+        />
+</LinearLayout>
+</ScrollView>

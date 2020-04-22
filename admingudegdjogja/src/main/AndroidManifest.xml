@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".view.activity.HomeActivity"/>
+        <activity android:name=".view.activity.DetailPesananSelesaiActivity"></activity>
+        <activity android:name=".view.activity.DetailPesananMasukActivity" />
+        <activity android:name=".view.activity.HomeActivity" />
         <activity
             android:name=".view.activity.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
