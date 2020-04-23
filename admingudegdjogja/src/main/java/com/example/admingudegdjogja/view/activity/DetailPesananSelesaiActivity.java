@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -46,5 +48,21 @@ public class DetailPesananSelesaiActivity extends AppCompatActivity {
         tv_pesanan_total_harga.setText(String.valueOf(pesanan_total_harga));
         tv_pesanan_delivery.setText(String.valueOf(pesanan_delivery));
         tv_pesanan_harga_totalplus.setText(String.valueOf(pesanan_total_plus));
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

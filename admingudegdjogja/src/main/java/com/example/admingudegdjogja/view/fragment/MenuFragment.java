@@ -1,5 +1,6 @@
 package com.example.admingudegdjogja.view.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.admingudegdjogja.R;
+import com.example.admingudegdjogja.view.activity.MenuTambahActivity;
 import com.example.admingudegdjogja.view.adapter.RecyclerViewMenuAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -46,7 +48,8 @@ public class MenuFragment extends Fragment {
         btn_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getContext(), MenuTambahActivity.class);
+                startActivity(intent);
             }
         });
     }
