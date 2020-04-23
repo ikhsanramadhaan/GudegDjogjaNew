@@ -3,4 +3,40 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_riwayat_pesanan">Riwayat Pemesanan</string>
+    <string name="title_menu_makanan">Menu Makanan</string>
+    <string name="title_pesanan_masuk">Pesanan Masuk</string>
+    <string name="title_pesanan_selesai">Pesanan Selesai</string>
+    <string name="title_welcome_back">WELCOME BACK,</string>
+    <string name="title_admin">ADMIN</string>
+    <string name="txt_orderan">Orderan</string>
+    <string name="txt_pager">#</string>
+    <string name="txt_pemesan">Pemesan</string>
+    <string name="txt_titikdua">:</string>
+    <string name="dummy_muhamad_ikhsan_ramadhan">Muhamad Ikhsan Ramadhan</string>
+    <string name="txt_alamat">Alamat</string>
+    <string name="dummy_cicadas">cicadas</string>
+    <string name="txt_nohp">No. HP</string>
+    <string name="dummy_nohp">081313198291</string>
+    <string name="txt_detail_pesanan">Detail_Pesanan</string>
+    <string name="txt_makanan">Makanan</string>
+    <string name="txt_aksen_x">X</string>
+    <string name="txt_tambahan">Tambahan</string>
+    <string name="txt_subtotal">Subtotal</string>
+    <string name="dummy_harga">Rp. 36.000</string>
+    <string name="txt_delivery">Delivery</string>
+    <string name="dummy_harga_delivery">Rp. 1.000</string>
+    <string name="txt_total">Total</string>
+    <string name="txt_selesai">SELESAI</string>
+    <string name="txt_menu_10_k">Menu 10 K</string>
+    <string name="txt_dummy_makanan">Gudeg Djogja Telor Mata Sapi</string>
+    <string name="txt_dummy_deskripsi">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
+    <string name="txt_menu_tambahan">Satuan</string>
+    <string name="title_ubah_menu">Ubah Menu</string>
+    <string name="txt_simpan">SIMPAN</string>
+    <string name="hint_nama_menu">Nama Menu</string>
+    <string name="title_nama_menu">Nama Menu</string>
+    <string name="title_kategori_menu">Kategori Menu</string>
+    <string name="title_deskripsi_menu">Deskripsi Menu</string>
+    <string name="title_detail_pesanan">Detail Pesanan</string>
 </resources>
