@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context=".activity.UserOrderActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_medium_8dp"
+                android:layout_marginTop="@dimen/dimen_medium_8dp"
+                android:text="@string/txt_detail_pesanan"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/text_size_title_medium_20sp" />
+
+            <TextView
+                android:id="@+id/act_detail_pesanan_masuk_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_medium_8dp"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/text_size_title_medium_20sp"
+                tools:text="123456" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/frogo_rv_dimen_100dp"
+            android:src="@drawable/bg_new" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp"
+        android:background="@drawable/bg_rv"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_big_16dp"
+            android:text="@string/txt_detail_pesanan"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_size_title_small_18sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:text="@string/txt_makanan"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="@dimen/text_size_title_small_18sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/act_detail_pesanan_masuk_rv_menu_makanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/content_list_detai_pesanan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:layout_marginTop="@dimen/dimen_big_16dp"
+                    android:text="@string/txt_tambahan"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="@dimen/text_size_title_small_18sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/act_detail_pesanan_masuk_rv_menu_tambahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/content_list_detai_pesanan"
+                    android:layout_marginBottom="@dimen/dimen_small_4dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
