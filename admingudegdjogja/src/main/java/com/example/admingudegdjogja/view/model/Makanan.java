@@ -12,6 +12,18 @@ public class Makanan implements Parcelable {
     private String deskripsi_makanan;
     private String foto_makanan;
 
+    public Makanan() {
+    }
+
+    public Makanan(String id_makanan, String nama_makanan, String kategori_makanan, int harga_makanan, String deskripsi_makanan, String foto_makanan) {
+        this.id_makanan = id_makanan;
+        this.nama_makanan = nama_makanan;
+        this.kategori_makanan = kategori_makanan;
+        this.harga_makanan = harga_makanan;
+        this.deskripsi_makanan = deskripsi_makanan;
+        this.foto_makanan = foto_makanan;
+    }
+
     public Makanan(String id_makanan, String nama_makanan, String kategori_makanan, String jumlah_makanan, int harga_makanan, String deskripsi_makanan, String foto_makanan) {
         this.id_makanan = id_makanan;
         this.nama_makanan = nama_makanan;

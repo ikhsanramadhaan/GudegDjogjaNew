@@ -8,7 +8,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/makanan_foto"
+        android:id="@+id/makanan_foto_menu"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_weight="0.5"
@@ -23,7 +23,7 @@
         android:layout_marginEnd="@dimen/dimen_medium_8dp">
 
         <TextView
-            android:id="@+id/makanan_nama"
+            android:id="@+id/makanan_nama_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_dummy_makanan"
@@ -31,7 +31,7 @@
             android:textSize="@dimen/text_size_title_small_18sp"/>
 
         <TextView
-            android:id="@+id/textview5"
+            android:id="@+id/textview5_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_dummy_deskripsi"
@@ -39,7 +39,7 @@
             android:textColor="@android:color/secondary_text_light"
             android:textSize="@dimen/text_size_default_12sp"/>
         <TextView
-            android:id="@+id/makanan_harga"
+            android:id="@+id/makanan_harga_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_harga"
