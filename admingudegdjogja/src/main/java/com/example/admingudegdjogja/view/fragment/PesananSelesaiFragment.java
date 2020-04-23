@@ -15,17 +15,23 @@ import android.view.ViewGroup;
 import com.example.admingudegdjogja.R;
 import com.example.admingudegdjogja.view.adapter.RecyclerViewPesananSelesaiAdapter;
 import com.example.admingudegdjogja.view.model.Pesanan;
-
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class PesananSelesaiFragment extends Fragment {
+    private DatabaseReference database;
     private RecyclerView rv_pesanan_selesai;
-    private RecyclerViewPesananSelesaiAdapter adapter;
+    private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<Pesanan> data;
+    private ArrayList<Pesanan> daftarPesanan;
     public PesananSelesaiFragment() {
         // Required empty public constructor
     }
@@ -35,17 +41,40 @@ public class PesananSelesaiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pesanan_selesai, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_pesanan_selesai, container, false);
+
+        return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        rv_pesanan_selesai = view.findViewById(R.id.rv_pesanan_selesai);
+        rv_pesanan_selesai = (RecyclerView)view.findViewById(R.id.rv_pesanan_selesai);
         rv_pesanan_selesai.setHasFixedSize(true);
-        adapter = new RecyclerViewPesananSelesaiAdapter(getContext());
         layoutManager = new LinearLayoutManager(getContext());
         rv_pesanan_selesai.setLayoutManager(layoutManager);
-        rv_pesanan_selesai.setAdapter(adapter);
+        database = FirebaseDatabase.getInstance().getReference("pesanan");
+        Query query = FirebaseDatabase.getInstance().getReference("pesanan")
+                .orderByChild("pesanan_status")
+                .equalTo("S");
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                daftarPesanan = new ArrayList<>();
+                for (DataSnapshot nodeDataSnapshot : dataSnapshot.getChildren()){
+                    Pesanan pesanan = nodeDataSnapshot.getValue(Pesanan.class);
+                    pesanan.setPesanan_id(nodeDataSnapshot.getKey());
+                    daftarPesanan.add(pesanan);
+                }
+                adapter = new RecyclerViewPesananSelesaiAdapter(daftarPesanan,getContext());
+                adapter.notifyDataSetChanged();
+                rv_pesanan_selesai.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

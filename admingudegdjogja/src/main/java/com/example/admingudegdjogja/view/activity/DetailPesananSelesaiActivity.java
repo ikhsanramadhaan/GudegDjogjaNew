@@ -28,13 +28,13 @@ public class DetailPesananSelesaiActivity extends AppCompatActivity {
         setTitle(getString(R.string.title_detail_pesanan));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        tv_pesanan_id = findViewById(R.id.pesanan_id);
+        tv_pesanan_id = findViewById(R.id.act_detail_pesanan_selesai_pesanan_id);
         tv_pesanan_total_harga = findViewById(R.id.act_detail_pesanan_selesai_pesanan_total_harga);
         tv_pesanan_harga_totalplus = findViewById(R.id.act_detail_pesanan_selesai_pesanan_harga_totalplus);
         tv_pesanan_delivery = findViewById(R.id.act_detail_pesanan_selesai_pesanan_harga_delivery);
         rv_menu_makanan = findViewById(R.id.act_detail_pesanan_selesai_pesanan_main_menu);
         rv_menu_tambahan = findViewById(R.id.act_detail_pesanan_selesai_pesanan_tambahan_menu);
-        adapter = new RecyclerViewPesananSelesaiAdapter(this);
+
 
         extrapesanan = getIntent().getParcelableExtra(EXTRA_PESANAN_SELESAI);
         String pesanan_id = extrapesanan.getPesanan_id();
@@ -46,7 +46,5 @@ public class DetailPesananSelesaiActivity extends AppCompatActivity {
         tv_pesanan_total_harga.setText(String.valueOf(pesanan_total_harga));
         tv_pesanan_delivery.setText(String.valueOf(pesanan_delivery));
         tv_pesanan_harga_totalplus.setText(String.valueOf(pesanan_total_plus));
-
-
     }
 }
