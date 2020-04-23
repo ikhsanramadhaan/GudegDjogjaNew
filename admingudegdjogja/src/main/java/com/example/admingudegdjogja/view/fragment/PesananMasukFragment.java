@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -57,8 +58,11 @@ public class PesananMasukFragment extends Fragment {
         layoutManager = new LinearLayoutManager(getContext());
         rvView.setLayoutManager(layoutManager);
 
-        database = FirebaseDatabase.getInstance().getReference();
-        database.child("pesanan").addValueEventListener(new ValueEventListener() {
+        database = FirebaseDatabase.getInstance().getReference("pesanan");
+        Query query = FirebaseDatabase.getInstance().getReference("pesanan")
+                .orderByChild("pesanan_status")
+                .equalTo("B");
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 dafatarPesanan = new ArrayList<>();
@@ -68,6 +72,7 @@ public class PesananMasukFragment extends Fragment {
                     dafatarPesanan.add(pesanan);
                 }
                 adapter = new RecyclerViewPesananMasukAdapter(dafatarPesanan,getContext());
+                adapter.notifyDataSetChanged();
                 rvView.setAdapter(adapter);
             }
 

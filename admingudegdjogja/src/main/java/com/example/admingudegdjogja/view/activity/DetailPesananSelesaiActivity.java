@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +17,7 @@ import com.example.admingudegdjogja.view.model.Pesanan;
 public class DetailPesananSelesaiActivity extends AppCompatActivity {
     public static final String EXTRA_PESANAN_SELESAI = "extra_pesanan_selesai";
     private TextView tv_pesanan_id, tv_pesanan_total_harga , tv_pesanan_harga_totalplus, tv_pesanan_delivery;
-    private Button btn_selesai;
+
     private Pesanan extrapesanan;
     private RecyclerView rv_menu_makanan , rv_menu_tambahan;
     private RecyclerViewPesananSelesaiAdapter adapter;
@@ -28,13 +30,13 @@ public class DetailPesananSelesaiActivity extends AppCompatActivity {
         setTitle(getString(R.string.title_detail_pesanan));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        tv_pesanan_id = findViewById(R.id.pesanan_id);
-        tv_pesanan_total_harga = findViewById(R.id.pesanan_total_harga);
-        tv_pesanan_harga_totalplus = findViewById(R.id.pesanan_harga_totalplus);
-        tv_pesanan_delivery = findViewById(R.id.pesanan_harga_delivery);
-        rv_menu_makanan = findViewById(R.id.pesanan_main_menu);
-        rv_menu_tambahan = findViewById(R.id.pesanan_tambahan_menu);
-        adapter = new RecyclerViewPesananSelesaiAdapter(this);
+        tv_pesanan_id = findViewById(R.id.act_detail_pesanan_selesai_pesanan_id);
+        tv_pesanan_total_harga = findViewById(R.id.act_detail_pesanan_selesai_pesanan_total_harga);
+        tv_pesanan_harga_totalplus = findViewById(R.id.act_detail_pesanan_selesai_pesanan_harga_totalplus);
+        tv_pesanan_delivery = findViewById(R.id.act_detail_pesanan_selesai_pesanan_harga_delivery);
+        rv_menu_makanan = findViewById(R.id.act_detail_pesanan_selesai_pesanan_main_menu);
+        rv_menu_tambahan = findViewById(R.id.act_detail_pesanan_selesai_pesanan_tambahan_menu);
+
 
         extrapesanan = getIntent().getParcelableExtra(EXTRA_PESANAN_SELESAI);
         String pesanan_id = extrapesanan.getPesanan_id();
@@ -46,12 +48,21 @@ public class DetailPesananSelesaiActivity extends AppCompatActivity {
         tv_pesanan_total_harga.setText(String.valueOf(pesanan_total_harga));
         tv_pesanan_delivery.setText(String.valueOf(pesanan_delivery));
         tv_pesanan_harga_totalplus.setText(String.valueOf(pesanan_total_plus));
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
 
-        btn_selesai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

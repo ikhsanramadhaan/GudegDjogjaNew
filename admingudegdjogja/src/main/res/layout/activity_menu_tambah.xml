@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Detail Menu"
+        android:text="Tambah Menu"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -29,14 +29,14 @@
         android:text="Foto"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/act_menu_makanan_foto"
+        app:layout_constraintBottom_toTopOf="@+id/act_menu_tambah_makanan_foto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/act_menu_makanan_foto"
+        android:id="@+id/act_menu_tambah_makanan_foto"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="33dp"
@@ -49,15 +49,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/ic_dummy_photo" />
 
-    <TextView
-        android:id="@+id/act_menu_makanan_nama"
-        android:layout_width="338dp"
-        android:layout_height="39dp"
+    <EditText
+        android:id="@+id/act_menu_tambah_makanan_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg_edit_text"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/hint_nama_menu"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="@dimen/dimen_big_ultra_32dp"
+        android:layout_marginEnd="@dimen/dimen_big_ultra_32dp"
         android:paddingStart="@dimen/dimen_medium_8dp"
         android:paddingTop="@dimen/dimen_medium_8dp"
         android:paddingEnd="@dimen/dimen_medium_8dp"
@@ -78,11 +82,11 @@
         android:text="@string/title_nama_menu"
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/act_menu_makanan_nama"
+        app:layout_constraintBottom_toTopOf="@+id/act_menu_tambah_makanan_nama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_foto" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_tambah_makanan_foto" />
 
     <TextView
         android:id="@+id/textView4"
@@ -97,18 +101,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_nama" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_tambah_makanan_nama" />
 
-    <TextView
-        android:id="@+id/act_menu_makanan_kategori"
+    <Spinner
+        android:id="@+id/act_menu_tambah_makanan_kategori"
         android:layout_width="339dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/bg_edit_text"
-        android:paddingStart="@dimen/dimen_medium_8dp"
-        android:paddingTop="@dimen/dimen_medium_8dp"
-        android:paddingEnd="@dimen/dimen_medium_8dp"
-        android:paddingBottom="@dimen/dimen_medium_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,20 +126,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_kategori" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_tambah_makanan_kategori" />
 
-    <TextView
-        android:id="@+id/act_menu_makanan_deskripsi"
-        android:layout_width="338dp"
-        android:layout_height="39dp"
+    <EditText
+        android:id="@+id/act_menu_tambah_makanan_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_edit_text"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/hint_nama_menu"
+        android:inputType="textMultiLine"
         android:paddingStart="@dimen/dimen_medium_8dp"
         android:paddingTop="@dimen/dimen_medium_8dp"
         android:paddingEnd="@dimen/dimen_medium_8dp"
         android:paddingBottom="@dimen/dimen_medium_8dp"
+        android:layout_marginStart="@dimen/dimen_big_ultra_32dp"
+        android:layout_marginEnd="@dimen/dimen_big_ultra_32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,68 +158,59 @@
         android:text="@string/title_harga_menu"
         android:textColor="#2B3D27"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/act_menu_makanan_harga"
+        app:layout_constraintBottom_toTopOf="@+id/act_menu_tambah_makanan_harga"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_deskripsi" />
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_tambah_makanan_deskripsi"
+        tools:ignore="UnknownIdInLayout" />
 
-    <TextView
-        android:id="@+id/act_menu_makanan_harga"
-        android:layout_width="338dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="16dp"
+    <EditText
+        android:id="@+id/act_menu_tambah_makanan_harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/bg_edit_text"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="@string/hint_nama_menu"
+        android:inputType="textMultiLine"
         android:paddingStart="@dimen/dimen_medium_8dp"
         android:paddingTop="@dimen/dimen_medium_8dp"
         android:paddingEnd="@dimen/dimen_medium_8dp"
         android:paddingBottom="@dimen/dimen_medium_8dp"
-        app:layout_constraintBottom_toTopOf="@+id/act_menu_btn_update"
+        android:layout_marginStart="@dimen/dimen_big_ultra_32dp"
+        android:layout_marginEnd="@dimen/dimen_big_ultra_32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textview" />
 
-    <Button
-        android:id="@+id/act_menu_btn_update"
-        android:layout_width="98dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="196dp"
-        android:background="@drawable/bg_button_update"
-        android:drawableStart="@drawable/ic_edit"
-        android:text="@string/txt_update"
-        android:textColor="@color/colorTextWhite"
-        android:textSize="@dimen/text_size_title_small_18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/menu_ubah_foto"
+        android:layout_width="31dp"
+        android:layout_height="26dp"
+        android:padding="3dp"
+        android:background="@drawable/bg_button"
+        app:layout_constraintBottom_toTopOf="@+id/act_menu_tambah_makanan_nama"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_harga" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882"
+        app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
 
     <Button
-        android:id="@+id/act_menu_btn_delete"
-        android:layout_width="104dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="195dp"
-        android:layout_marginBottom="181dp"
-        android:background="@drawable/bg_button_delete"
-        android:text="@string/txt_delete"
-        android:textStyle="bold"
-        android:drawableStart="@drawable/ic_delete_black_24dp"
+        android:id="@+id/act_menu_tambah_btn_tambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_tambah"
+        android:background="@drawable/bg_button_update"
         android:textColor="@color/colorTextWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toEndOf="@+id/act_menu_btn_update"
-        app:layout_constraintTop_toBottomOf="@+id/act_menu_makanan_harga"
-        app:layout_constraintVertical_bias="0.25" />
-
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act_menu_tambah_makanan_harga"
+        app:layout_constraintVertical_bias="0.111" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

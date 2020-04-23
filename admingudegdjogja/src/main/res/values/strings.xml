@@ -39,4 +39,10 @@
     <string name="title_kategori_menu">Kategori Menu</string>
     <string name="title_deskripsi_menu">Deskripsi Menu</string>
     <string name="title_detail_pesanan">Detail Pesanan</string>
+    <string name="txt_update">UPDATE</string>
+    <string name="txt_delete">Delete</string>
+    <string name="title_harga_menu">Harga Menu</string>
+    <string name="txt_tambah">Tambah</string>
+    <string name="title_tambah_menu">Tambah Menu</string>
+    <string name="title_update_menu">Ubah Menu</string>
 </resources>

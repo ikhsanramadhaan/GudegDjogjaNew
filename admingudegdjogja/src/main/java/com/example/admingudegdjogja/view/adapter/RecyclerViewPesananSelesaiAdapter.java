@@ -21,6 +21,11 @@ public class RecyclerViewPesananSelesaiAdapter extends RecyclerView.Adapter<Recy
     private Context mContext;
     private ArrayList<Pesanan> data;
 
+    public RecyclerViewPesananSelesaiAdapter(ArrayList<Pesanan> data,Context mContext) {
+        this.data = data;
+        this.mContext = mContext;
+    }
+
     public RecyclerViewPesananSelesaiAdapter(Context mContext) {
         this.mContext = mContext;
     }
@@ -46,7 +51,7 @@ public class RecyclerViewPesananSelesaiAdapter extends RecyclerView.Adapter<Recy
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, DetailPesananMasukActivity.class);
+                Intent intent = new Intent(mContext, DetailPesananSelesaiActivity.class);
                 Pesanan parcePesanan = data.get(position);
                 intent.putExtra(DetailPesananSelesaiActivity.EXTRA_PESANAN_SELESAI, parcePesanan);
                 mContext.startActivity(intent);

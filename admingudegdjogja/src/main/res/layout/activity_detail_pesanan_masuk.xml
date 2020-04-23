@@ -33,7 +33,7 @@
                 android:layout_marginTop="@dimen/dimen_medium_8dp"/>
 
             <TextView
-                android:id="@+id/pesanan_id"
+                android:id="@+id/act_detail_pesanan_masuk_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
@@ -75,7 +75,7 @@
             android:layout_marginTop="@dimen/dimen_big_16dp"
             android:textSize="@dimen/text_size_title_small_18sp" />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_menu_makanan"
+            android:id="@+id/act_detail_pesanan_masuk_rv_menu_makanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/content_list_makanan"/>
@@ -91,7 +91,7 @@
             android:textSize="@dimen/text_size_title_small_18sp"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_menu_tambahan"
+            android:id="@+id/act_detail_pesanan_masuk_rv_menu_tambahan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/content_list_makanan"/>
@@ -116,7 +116,7 @@
                     android:textSize="@dimen/text_size_title_small_18sp"/>
 
                 <TextView
-                    android:id="@+id/pesanan_total_harga"
+                    android:id="@+id/act_detail_pesanan_masuk_pesanan_total_harga"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -143,7 +143,7 @@
                         android:textSize="@dimen/text_size_title_small_18sp"/>
 
                     <TextView
-                        android:id="@+id/pesanan_harga_delivery"
+                        android:id="@+id/act_detail_pesanan_masuk_pesanan_harga_delivery"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -172,7 +172,7 @@
                     android:textSize="@dimen/text_size_title_small_18sp"/>
 
                 <TextView
-                    android:id="@+id/pesanan_harga_totalplus"
+                    android:id="@+id/act_detail_pesanan_masuk_pesanan_harga_totalplus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
@@ -189,6 +189,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_selesai_pesanan_masuk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_button_2"
