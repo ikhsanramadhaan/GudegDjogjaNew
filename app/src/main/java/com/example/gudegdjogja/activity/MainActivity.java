@@ -1,4 +1,4 @@
-package com.example.gudegdjogja;
+package com.example.gudegdjogja.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.gudegdjogja.R;
 import com.example.gudegdjogja.fragment.MenuUserFragment;
 import com.example.gudegdjogja.fragment.RiwayatPemesananFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
