@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/roundedbackround"
+    tools:context=".fragment.MenuUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_medium_8dp"
+            android:layout_marginBottom="@dimen/dimen_big_16dp"
+            android:text="Silahkan pilih pesanan"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/roundedbackround"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_menu10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_size_medium_16sp"
+                    android:layout_marginTop="@dimen/text_size_medium_16sp"
+                    android:text="@string/txt_menu_10_k"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_title_big_24sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_menu_10_k"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/content_menu_user" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_size_medium_16sp"
+                    android:layout_marginTop="@dimen/text_size_medium_16sp"
+                    android:text="@string/txt_menu_tambahan"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_title_big_24sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/id_satuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/content_menu_user" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_small_4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="@dimen/text_size_medium_16sp"
+                tools:text="Sub Total" />
+
+            <TextView
+                android:id="@+id/makanan_subtotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="@dimen/text_size_medium_16sp"
+                tools:text="Rp. 120.000" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_small_4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="@dimen/text_size_medium_16sp"
+                tools:text="Delivery" />
+
+            <TextView
+                android:id="@+id/makanan_delivery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="@dimen/text_size_medium_16sp"
+                tools:text="Rp. 1.000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dimen_medium_8dp"
+            android:layout_marginTop="@dimen/dimen_small_4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="@dimen/text_size_title_big_24sp"
+                tools:text="Total" />
+
+            <TextView
+                android:id="@+id/makanan_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textSize="@dimen/text_size_title_big_24sp"
+                tools:text="Rp. 120.000" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/frg_menu_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="@dimen/frogo_rv_dimen_10dp"
+                android:src="@drawable/ic_add_black_24dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

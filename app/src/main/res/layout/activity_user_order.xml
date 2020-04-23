@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".view.activity.DetailPesananMasukActivity">
+    tools:context=".activity.UserOrderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,12 +24,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
                 android:layout_marginTop="@dimen/dimen_medium_8dp"
-                android:text="@string/txt_detail_pesanan"
+                android:text="Detail Pemesanan"
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/text_size_title_medium_20sp" />
 
             <TextView
-                android:id="@+id/act_detail_pesanan_selesai_pesanan_id"
+                android:id="@+id/act_detail_pesanan_masuk_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
@@ -54,20 +54,11 @@
         android:orientation="vertical"
         android:paddingBottom="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_medium_8dp"
-            android:layout_marginTop="@dimen/dimen_big_16dp"
-            android:text="@string/txt_detail_pesanan"
-            android:textColor="@color/colorTextBlack"
-            android:textSize="@dimen/text_size_title_small_18sp"
-            android:textStyle="bold" />
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:paddingBottom="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -77,16 +68,80 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:text="Informasi Pemesan"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/text_size_title_medium_20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/NamaPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/AlamatPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Alamat">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/NoHpPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No HP">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
+                    android:text="Detail Pesanan"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_marginTop="@dimen/dimen_small_4dp"
+                    android:textSize="@dimen/text_size_title_medium_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_medium_8dp"
                     android:text="@string/txt_makanan"
                     android:textColor="@android:color/secondary_text_light"
                     android:textSize="@dimen/text_size_title_small_18sp"
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/act_detail_pesanan_selesai_pesanan_main_menu"
+                    android:id="@+id/act_detail_pesanan_masuk_rv_menu_makanan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/content_list_makanan" />
+                    tools:listitem="@layout/content_list_detai_pesanan" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,22 +154,21 @@
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/act_detail_pesanan_selesai_pesanan_tambahan_menu"
+                    android:id="@+id/act_detail_pesanan_masuk_rv_menu_tambahan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/content_list_makanan" />
+                    tools:listitem="@layout/content_list_detai_pesanan"
+                    android:layout_marginBottom="@dimen/dimen_small_4dp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_medium_8dp"
-        android:layout_marginEnd="@dimen/dimen_medium_8dp"
         android:background="@drawable/bg_rv"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/dimen_medium_8dp">
+        android:layout_marginStart="@dimen/dimen_medium_8dp"
+        android:layout_marginEnd="@dimen/dimen_medium_8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -125,18 +179,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:text="@string/txt_subtotal"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="@dimen/text_size_title_small_18sp" />
 
             <TextView
-                android:id="@+id/act_detail_pesanan_selesai_pesanan_total_harga"
+                android:id="@+id/act_detail_pesanan_masuk_pesanan_total_harga"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="0.5"
                 android:text="@string/dummy_harga"
                 android:textColor="@android:color/secondary_text_light"
@@ -153,18 +207,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:text="@string/txt_delivery"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="@dimen/text_size_title_small_18sp" />
 
             <TextView
-                android:id="@+id/act_detail_pesanan_selesai_pesanan_harga_delivery"
+                android:id="@+id/act_detail_pesanan_masuk_pesanan_harga_delivery"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="0.5"
                 android:text="@string/dummy_harga_delivery"
                 android:textColor="@android:color/secondary_text_light"
@@ -182,25 +236,41 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:text="@string/txt_total"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_title_small_18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
 
             <TextView
-                android:id="@+id/act_detail_pesanan_selesai_pesanan_harga_totalplus"
+                android:id="@+id/act_detail_pesanan_masuk_pesanan_harga_totalplus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_medium_8dp"
-                android:layout_marginTop="@dimen/dimen_big_16dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="0.5"
                 android:text="@string/dummy_harga_delivery"
                 android:textColor="@android:color/secondary_text_light"
                 android:textSize="@dimen/text_size_title_small_18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
 
         </LinearLayout>
     </LinearLayout>
+    <Button
+        android:id="@+id/btn_pesanan_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/dimen_big_16dp"
+        android:background="@drawable/bg_button_2"
+        android:paddingStart="@dimen/frogo_rv_dimen_50dp"
+        android:paddingEnd="@dimen/frogo_rv_dimen_50dp"
+        android:text="Order"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_medium_16sp"
+        android:textStyle="bold" />
 </LinearLayout>
