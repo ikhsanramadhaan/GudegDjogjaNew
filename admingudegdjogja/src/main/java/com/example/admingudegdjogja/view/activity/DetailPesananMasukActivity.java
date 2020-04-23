@@ -26,13 +26,13 @@ public class DetailPesananMasukActivity extends AppCompatActivity {
         setTitle(getString(R.string.title_detail_pesanan));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        tv_pesanan_id = findViewById(R.id.pesanan_id);
-        tv_pesanan_total_harga = findViewById(R.id.pesanan_total_harga);
-        tv_pesanan_harga_totalplus = findViewById(R.id.pesanan_harga_totalplus);
-        tv_pesanan_delivery = findViewById(R.id.pesanan_harga_delivery);
+        tv_pesanan_id = findViewById(R.id.act_detail_pesanan_masuk_id);
+        tv_pesanan_total_harga = findViewById(R.id.act_detail_pesanan_masuk_pesanan_total_harga);
+        tv_pesanan_harga_totalplus = findViewById(R.id.act_detail_pesanan_masuk_pesanan_harga_totalplus);
+        tv_pesanan_delivery = findViewById(R.id.act_detail_pesanan_masuk_pesanan_harga_delivery);
 
-        rv_menu_makanan = findViewById(R.id.rv_menu_makanan);
-        rv_menu_tambahan = findViewById(R.id.rv_menu_tambahan);
+        rv_menu_makanan = findViewById(R.id.act_detail_pesanan_masuk_rv_menu_makanan);
+        rv_menu_tambahan = findViewById(R.id.act_detail_pesanan_masuk_rv_menu_tambahan);
 
         extrapesanan = getIntent().getParcelableExtra(EXTRA_PESANAN_MASUK);
 

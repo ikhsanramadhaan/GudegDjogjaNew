@@ -24,12 +24,9 @@ public class RecyclerViewPesananMasukAdapter extends RecyclerView.Adapter<Recycl
     public RecyclerViewPesananMasukAdapter(ArrayList<Pesanan> data,Context context) {
         this.data = data;
         this.context = context;
-    }
-
-    public void additem(ArrayList<Pesanan> data){
-        this.data = data;
         notifyDataSetChanged();
     }
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView txt_id, txt_nama, txt_alamat,txt_no_kontak;
